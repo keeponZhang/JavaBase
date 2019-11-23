@@ -219,7 +219,9 @@
 				}
 			}.start();
 ###24.12_多线程(守护线程)(掌握)
-* setDaemon(), 设置一个线程为守护线程, 该线程不会单独执行, 当其他非守护线程都执行结束后, 自动退出
+* setDaemon(), 设置一个线程为守护线程, 该线程不会单独执行,
+  当其他非守护线程都执行结束后,
+  自动退出(相当于象棋的除了帅的其他棋子，帅死了，其他其他也会死，但是会有个缓存过程)
 	* 
 			Thread t1 = new Thread() {
 				public void run() {
@@ -252,7 +254,8 @@
 			t1.start();
 			t2.start();
 ###24.13_多线程(加入线程)(掌握)
-* join(), 当前线程暂停, 等待指定的线程执行结束后, 当前线程再继续
+* join(), 当前线程暂停, 等待指定的线程执行结束后,
+  当前线程再继续（t1.join 相当于t1插队，t1执行完，当前线程继续执行）
 * join(int), 可以等待指定的毫秒之后继续
 	* 
 			final Thread t1 = new Thread() {
@@ -290,7 +293,7 @@
 			t1.start();
 			t2.start();
 ###24.14_多线程(礼让线程)(了解)
-* yield让出cpu
+* yield让出cpu（当前线程让出cpu,支持不好，有时候看不到效果）
 
 ###24.15_多线程(设置线程的优先级)(了解)
 * setPriority()设置线程的优先级
@@ -307,21 +310,22 @@
 				Demo d = new Demo();
 				public static void print1() {
 					synchronized(d){				//锁对象可以是任意对象,但是被锁的代码需要保证是同一把锁,不能用匿名对象
-						System.out.print("黑");
-						System.out.print("马");
-						System.out.print("程");
-						System.out.print("序");
-						System.out.print("员");
+						System.out.print("m");
+						System.out.print("y");
+						System.out.print("n");
+						System.out.print("a");
+						System.out.print("m");
+						System.out.print("e");
 						System.out.print("\r\n");
 					}
 				}
 	
 				public static void print2() {	
 					synchronized(d){	
-						System.out.print("传");
-						System.out.print("智");
-						System.out.print("播");
-						System.out.print("客");
+						System.out.print("d");
+						System.out.print("a");
+						System.out.print("y");
+						System.out.print("s");
 						System.out.print("\r\n");
 					}
 				}
@@ -332,11 +336,10 @@
 		class Printer {
 			public static void print1() {
 				synchronized(Printer.class){				//锁对象可以是任意对象,但是被锁的代码需要保证是同一把锁,不能用匿名对象
-					System.out.print("黑");
-					System.out.print("马");
-					System.out.print("程");
-					System.out.print("序");
-					System.out.print("员");
+					System.out.print("k");
+					System.out.print("e");
+					System.out.print("e");
+					System.out.print("p");
 					System.out.print("\r\n");
 				}
 			}
@@ -345,10 +348,11 @@
 			 * 静态的同步函数的锁是:字节码对象
 			 */
 			public static synchronized void print2() {	
-				System.out.print("传");
-				System.out.print("智");
-				System.out.print("播");
-				System.out.print("客");
+				System.out.print("h");
+				System.out.print("e");
+				System.out.print("l");
+				System.out.print("l");
+				System.out.print("o");
 				System.out.print("\r\n");
 			}
 		}

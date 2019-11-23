@@ -32,7 +32,7 @@ public class Demo2_Server {
 						BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));		//将字节流包装成了字符流
 						PrintStream ps = new PrintStream(socket.getOutputStream());					//PrintStream中有写出换行的方法
 						
-						ps.println("欢迎咨询黑马程序员");
+						ps.println("欢迎程序员");
 						System.out.println(br.readLine());
 						ps.println("不好意思,爆满了");
 						System.out.println(br.readLine());
@@ -54,7 +54,7 @@ public class Demo2_Server {
 		BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));		//将字节流包装成了字符流
 		PrintStream ps = new PrintStream(socket.getOutputStream());					//PrintStream中有写出换行的方法
 		
-		ps.println("欢迎咨询黑马程序员");
+		ps.println("欢迎程序员");
 		System.out.println(br.readLine());
 		ps.println("不好意思,爆满了");
 		System.out.println(br.readLine());

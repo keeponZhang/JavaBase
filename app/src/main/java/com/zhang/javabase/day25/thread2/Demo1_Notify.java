@@ -47,11 +47,10 @@ class Printer {
 			if(flag != 1) {
 				this.wait();					//当前线程等待
 			}
-			System.out.print("黑");
-			System.out.print("马");
-			System.out.print("程");
-			System.out.print("序");
-			System.out.print("员");
+			System.out.print("k");
+			System.out.print("e");
+			System.out.print("e");
+			System.out.print("p");
 			System.out.print("\r\n");
 			flag = 2;
 			this.notify();						//随机唤醒单个等待的线程
@@ -63,10 +62,9 @@ class Printer {
 			if(flag != 2) {
 				this.wait();
 			}
-			System.out.print("传");
-			System.out.print("智");
-			System.out.print("播");
-			System.out.print("客");
+			System.out.print("t");
+			System.out.print("o");
+			System.out.print("m");
 			System.out.print("\r\n");
 			flag = 1;
 			this.notify();

@@ -24,15 +24,15 @@ public class Demo7_StringMethod {
 		int num = s1.compareTo(s2);				//按照码表值比较
 		System.out.println(num);
 		
-		String s3 = "黑";
-		String s4 = "马";
+		String s3 = "马";
+		String s4 = "云";
 		int num2 = s3.compareTo(s4);
-		System.out.println('黑' + 0);			//查找的是unicode码表值
-		System.out.println('马' + 0);
+		System.out.println('马' + 0);			//查找的是unicode码表值
+		System.out.println('云' + 0);
 		System.out.println(num2);
 		
-		String s5 = "heima";
-		String s6 = "HEIMA";
+		String s5 = "it";
+		String s6 = "IT";
 		int num3 = s5.compareTo(s6);
 		System.out.println(num3);
 		

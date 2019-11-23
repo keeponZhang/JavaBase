@@ -20,14 +20,14 @@ public class Demo5_Join {
 				for(int i = 0; i < 10; i++) {
 					if(i == 2) {
 						try {
-							//t1.join();
-							t1.join(1);					//插队指定的时间,过了指定时间后,两条线程交替执行
+							t1.join();//相当于插队，t1执行完，当前线程继续执行
+//							t1.join(1);					//插队指定的时间,过了指定时间后,两条线程交替执行
 						} catch (InterruptedException e) {
 							
 							e.printStackTrace();
 						}
 					}
-					System.out.println(getName() + "...bb");
+					System.out.println(getName() + "...bb "+i);
 				}
 			}
 		};

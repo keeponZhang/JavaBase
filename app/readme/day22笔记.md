@@ -56,7 +56,7 @@
 			//System.out.println(new String(newArr));
 			System.out.println(baos);
 			fis.close();
-###22.04_IO流(内存输出流之黑马面试题)(掌握)
+###22.04_IO流(内存输出流之面试题)(掌握)
 * 定义一个文件输入流,调用read(byte[] b)方法,将a.txt文件中的内容打印出来(byte数组大小限制为5)
 * 
 			FileInputStream fis = new FileInputStream("a.txt");				//创建字节输入流,关联a.txt

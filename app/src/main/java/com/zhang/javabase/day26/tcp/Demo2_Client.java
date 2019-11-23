@@ -2,9 +2,7 @@ package com.zhang.javabase.day26.tcp;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.OutputStream;
 import java.io.PrintStream;
 import java.net.Socket;
 import java.net.UnknownHostException;
@@ -26,7 +24,7 @@ public class Demo2_Client {
 		PrintStream ps = new PrintStream(socket.getOutputStream());					//PrintStream中有写出换行的方法
 		
 		System.out.println(br.readLine());
-		ps.println("我想报名黑马程序员");
+		ps.println("我想成为程序员");
 		System.out.println(br.readLine());
 		ps.println("大哭!!!能不能给次机会");
 		

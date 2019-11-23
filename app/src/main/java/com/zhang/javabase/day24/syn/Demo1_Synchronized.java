@@ -33,11 +33,12 @@ class Printer {
 	public void print1() {
 		//synchronized(new Demo()) {							//同步代码块,锁机制,锁对象可以是任意的
 		synchronized(d) {
-			System.out.print("黑");
-			System.out.print("马");
-			System.out.print("程");
-			System.out.print("序");
-			System.out.print("员");
+			System.out.print("k");
+			System.out.print("e");
+			System.out.print("e");
+			System.out.print("p");
+			System.out.print("o");
+			System.out.print("n");
 			System.out.print("\r\n");
 		}
 	}
