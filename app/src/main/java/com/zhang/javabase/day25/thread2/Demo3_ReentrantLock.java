@@ -63,7 +63,7 @@ class Printer3 {
 	public void print1() throws InterruptedException {							
 		r.lock();								//获取锁
 			if(flag != 1) {
-				c1.await();
+				c1.await(); //c1等待
 			}
 			System.out.print("k");
 			System.out.print("e");
@@ -72,7 +72,7 @@ class Printer3 {
 			System.out.print("\r\n");
 			flag = 2;
 			//this.notify();						//随机唤醒单个等待的线程
-			c2.signal();
+			c2.signal();//唤醒c2
 		r.unlock();								//释放锁
 	}
 	
